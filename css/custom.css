@@ -1,0 +1,149 @@
+
+html, body, .container {
+  height: 100%;
+}
+.container {
+  position: relative;
+}
+.dez-tabs {
+  margin-top: 10px;
+}
+
+ul.navbar-nav {
+  margin-right: 20px;
+}
+
+.header-slim {
+  width: 500px;
+  position: absolute;
+  height: 30px;
+  line-height: 30px;
+}
+.header-2 {
+  position: absolute;
+  top: 30px;
+  line-height: 30px;
+  height: 30px;
+}
+
+ul.header {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+ul.header li {
+  display: inline;
+  border-left: 1px solid black;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+ul.header li:first-child {
+  border-left: 0;
+}
+
+/**
+ * folder
+ */
+
+.folder {
+  padding-top: 60px;
+}
+
+.folder .tab-content {
+  overflow-x: auto;
+}
+.folder-both {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.folder-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 20px 20px 20px 0;
+  padding-top: 65px;
+}
+.folder-left {
+  left: 0;
+}
+.folder-right {
+  right: 0;
+}
+.folder-half .tab-wrapper {
+  padding: 40px 0 0 0;
+  height: 100%;
+}
+.folder-half .tab-wrapper .tab-content {
+  background: #dedede;
+  border: 1px solid gray;
+  height: 100%;
+  padding: 10px;
+}
+.folder-half ul.nav-tabs {
+  position: absolute;
+  background: white;
+  margin-left: 20px;
+}
+.folder-half ul.nav-tabs {
+  border: 1px solid gray;
+}
+.folder-half ul.nav-tabs li.active,
+.folder-half ul.nav-tabs li.active a {
+  background: #dedede;
+}
+
+.folder-right {
+  width: 50%;
+  float: right;
+  height: 100%;
+}
+.folder-ctrl {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  padding-bottom: 16px;
+  z-index: 100;
+}
+
+/**
+ * collapse left
+ */
+.folder-collapse-left .folder-left {
+  width: 40px;
+}
+.folder-collapse-left .folder-left ul {
+  display: none;
+}
+.folder-collapse-left .folder-right {
+  width: 100%;
+  padding-left: 40px;
+}
+.folder-collapse-left .folder-left .tab-pane {
+  display: none;
+}
+/* collapse right */
+.folder-collapse-right .folder-right {
+  width: 40px;
+  padding-right: 0;
+  padding-left: 20px;
+}
+.folder-collapse-right .folder-right ul {
+  display: none;
+}
+.folder-collapse-right .folder-left {
+  width: 100%;
+  padding-right: 40px;
+}
+.folder-collapse-right .folder-right .tab-pane {
+  display: none;
+}
+.folder-collapse-right .folder-ctrl {
+  margin-right: 20px;
+}
+
+
+
