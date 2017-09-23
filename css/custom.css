@@ -198,6 +198,7 @@ ul.header li:first-child {
   height: 100%;
 }
 #worldMap {
+  position: relative;
   background: url("../images/maps/1.png");
 
   /* width: 2206px;

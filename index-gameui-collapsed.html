@@ -36,6 +36,24 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Roboto:100,300,400,500,700,900" rel="stylesheet"> 
   </head>
   <body>
+
+    <div id="myModal" class="modal fade" role="dialog" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>this here be my modal</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="container">
       <div class="folder folder-both folder-collapse-right">
         <div class="folder folder-left folder-half">
@@ -49,6 +67,12 @@
               <div class="tab-pane active" id="dev6">
                 <div id="worldMapContainer">
                   <div id="worldMap">
+
+                    <a data-toggle="modal" data-target="#myModal" href="javascript:;">
+                      <img src="images/64x64/pin.png" 
+                           style="position: absolute; top: 164px; left: 100px;" alt="" />
+                    </a>
+
                     <div class="text-white"></div>
                   </div>
                 </div>
