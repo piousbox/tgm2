@@ -505,5 +505,10 @@ $('#worldMap').mousemove(function (e) {
 });
 */
 $(document).ready(function () {
-  new VanillaKinetic($(".world-map-container"));
+  var $id = function(id) { return document.getElementById(id); };
+  var $click = function(elem, fn) { return elem.addEventListener('click', function(e) {
+    fn.apply(elem, [e]);
+  }, false); };
+  new VanillaKinetic($id("worldMapContainer"));
+  // $(".world-map-container").kinetic();
 });
