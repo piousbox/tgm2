@@ -468,15 +468,16 @@ $('.btn-down').on('click', function () {
 /**
  * map _vp_
  */
+/*
 var isDragging = false;
 var oldX, oldY;
 var touchDownX, touchDownY;
 $('#worldMap').mousedown(function (e) {
   $('#worldMap').css('cursor', 'pointer');
-  oldX = parseInt($('#worldMap').css('background-position').split(' ')[0])
-  oldY = parseInt($('#worldMap').css('background-position').split(' ')[1])
+  oldX = $('.world-map-container').scrollLeft()
+  oldY = $('.world-map-container').scrollTop()
 
-  console.log('old x, y:', oldX, oldY);
+  console.log('old x, y:', oldX);
 
   touchDownX = e.offsetX;
   touchDownY = e.offsetY;
@@ -492,11 +493,17 @@ $('#worldMap').mousemove(function (e) {
     var deltaX = touchDownX - e.offsetX;
     var deltaY = touchDownY - e.offsetY;
 
-    var newX = - (deltaX - oldX );
+    console.log('+++ +++ delta x, y:', deltaX);
+
+    var newX = oldX + deltaX;
     var newY = - (deltaY - oldY );
 
-    console.log('+++ +++ new x, y:', newX, newY);
+    console.log('+++ +++ new x, y:', newX);
 
-    $('#worldMap').css( 'background-position', ""+newX+"px "+newY+"px " );
+    $('.world-map-container').scrollLeft(newX)
   }
+});
+*/
+$(document).ready(function () {
+  new VanillaKinetic($(".world-map-container"));
 });

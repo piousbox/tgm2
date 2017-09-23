@@ -19,6 +19,8 @@
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
 	  <![endif]-->
+    <script type="text/javascript"  src="js/classList.js"></script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
@@ -45,7 +47,13 @@
           <div class="tab-wrapper">
             <div class="tab-content" id="dev1">
               <div class="tab-pane active" id="dev6">
-                <div id="worldMap"></div>
+                <div class="world-map-container">
+                  <div id="worldMap">
+                    <div class="text-white">
+                      opaa?
+                      <h1>some stuff</h1></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -87,6 +95,8 @@
     </div>
     
     <!-- JavaScript  files ========================================= -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_YEzHx_YCQvqQSB_xuSC18BT81BlKVvI&sensor=false"></script>
+
     <script type="text/javascript"  src="js/jquery.min.js"></script>
     <!-- jquery.min js -->
     <script type="text/javascript"  src="js/bootstrap.min.js"></script>
@@ -109,7 +119,6 @@
     <!-- masonry  -->
     <script type="text/javascript"  src="js/owl.carousel.js"></script>
     <!-- OWL  Slider  -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_YEzHx_YCQvqQSB_xuSC18BT81BlKVvI&sensor=false"></script>
     <!-- google map  -->
     <script type="text/javascript"  src="js/custom.js"></script>
     <!-- custom fuctions  -->
@@ -117,6 +126,7 @@
     <!-- sortcode fuctions  -->
     <!-- switcher fuctions -->
     <script type="text/javascript"  src="js/switcher.min.js"></script>
+    <script type="text/javascript"  src="js/vanilla.kinetic.js"></script>
     <div id="loading-area"></div>
 
   </body>
