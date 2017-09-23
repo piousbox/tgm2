@@ -421,7 +421,7 @@ jQuery(window).resize(function() {
 /* Loading End */
 
 /**
- * Piousbox 
+ * collapse _vp_
  */
 // collapse back and forth
 var collapseState       = 'right';
@@ -465,4 +465,26 @@ $('.btn-down').on('click', function () {
   }
 })
 
+/**
+ * map _vp_
+ */
+var isDragging = false;
+$('#worldMap').mousedown(function (e) {
+  isDragging = true;
+  $('#worldMap').css('cursor', 'pointer');
+  var oldX = e.offsetX;
+  var oldY = e.offsetY;
+
+  console.log('+++ +++ x, y:', oldX, oldY);
+
+});
+$('#worldMap').mouseup(function (e) {
+  isDragging = false;
+  $('#worldMap').css('cursor', 'auto');
+});
+$('#worldMap').mousemove(function (e) {
+  if (isDragging) {
+    console.log('+++ +++ mousemove:', e.offsetX, e.offsetY);
+  }
+});
 
