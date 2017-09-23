@@ -30,6 +30,7 @@ ul.header {
   position: absolute;
   right: 20px;
   top: 10px;
+  background: yellow;
 }
 ul.header li {
   display: inline;
@@ -63,8 +64,9 @@ ul.header li:first-child {
   width: 50%;
   height: 100%;
   float: left;
-  padding: 20px 20px 20px 0;
   padding-top: 65px;
+  padding-right: 20px;
+  padding-bottom: 132px; /* 16 + 16 + 100 */
 }
 .folder-left {
   left: 0;
@@ -99,14 +101,50 @@ ul.header li:first-child {
   width: 50%;
   float: right;
   height: 100%;
+  padding-right: 0;
 }
 .folder-ctrl {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 132px; /* 16 + 16 + 100 */
   z-index: 100;
+}
+.footer-collapsed .folder-ctrl {
+  padding-bottom: 52px;
+}
+.folder-footer {
+  position: absolute;
+  bottom: 16px;
+  border: 1px solid gray;
+  width: 100%;
+  height: 100px;
+  background: #dedede;
+}
+.footer-collapsed .folder-half {
+ padding-bottom: 52px;
+}
+.footer-collapsed .folder-footer{
+  height: 20px;
+}
+.footer-collapsed .folder-footer-content {
+  display: none;
+}
+.folder-footer-ctrl {
+  position: absolute;
+  top: -20px;
+}
+.folder-footer-content {
+  padding-left: 110px;
+}
+.folder-footer .avatar {
+  height: 80px;
+  margin: 10px;
+  border: 1px solid yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /**

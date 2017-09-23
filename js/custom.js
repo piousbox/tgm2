@@ -421,10 +421,11 @@ jQuery(window).resize(function() {
 /* Loading End */
 
 /**
- * piousbox 
+ * Piousbox 
  */
 // collapse back and forth
-var collapseState = 'right';
+var collapseState       = 'right';
+var footerCollapseState = 'up';
 $('.btn-left').on('click', function () {
   if (collapseState === 'left') {
     /* nothing */
@@ -445,6 +446,22 @@ $('.btn-right').on('click', function () {
   } else if (collapseState === 'left') {
     collapseState = 'center'
     $('.folder-both').removeClass('folder-collapse-left')
+  }
+})
+$('.btn-up').on('click', function () {
+  if (footerCollapseState === 'up') {
+    /* nothing */
+  } else if (footerCollapseState === 'down') {
+    footerCollapseState = 'up'
+    $('.folder-both').removeClass('footer-collapsed')
+  }
+})
+$('.btn-down').on('click', function () {
+  if (footerCollapseState === 'down') {
+    /* nothing */
+  } else if (footerCollapseState === 'up') {
+    footerCollapseState = 'down'
+    $('.folder-both').addClass('footer-collapsed')
   }
 })
 
