@@ -469,14 +469,19 @@ $('.btn-down').on('click', function () {
  * map _vp_
  */
 var isDragging = false;
+var oldX, oldY;
+var touchDownX, touchDownY;
 $('#worldMap').mousedown(function (e) {
-  isDragging = true;
   $('#worldMap').css('cursor', 'pointer');
-  var oldX = e.offsetX;
-  var oldY = e.offsetY;
+  oldX = parseInt($('#worldMap').css('background-position').split(' ')[0])
+  oldY = parseInt($('#worldMap').css('background-position').split(' ')[1])
 
-  console.log('+++ +++ x, y:', oldX, oldY);
+  console.log('old x, y:', oldX, oldY);
 
+  touchDownX = e.offsetX;
+  touchDownY = e.offsetY;
+
+  isDragging = true;
 });
 $('#worldMap').mouseup(function (e) {
   isDragging = false;
@@ -484,7 +489,14 @@ $('#worldMap').mouseup(function (e) {
 });
 $('#worldMap').mousemove(function (e) {
   if (isDragging) {
-    console.log('+++ +++ mousemove:', e.offsetX, e.offsetY);
+    var deltaX = touchDownX - e.offsetX;
+    var deltaY = touchDownY - e.offsetY;
+
+    var newX = - (deltaX - oldX );
+    var newY = - (deltaY - oldY );
+
+    console.log('+++ +++ new x, y:', newX, newY);
+
+    $('#worldMap').css( 'background-position', ""+newX+"px "+newY+"px " );
   }
 });
-
